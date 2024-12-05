@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuChat AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1e6;
+            color: #3b3a36;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #558b2f;
+            margin-top: 20px;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        form {
+            margin: 30px auto;
+            padding: 30px;
+            width: 60%;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        form:hover {
+            transform: scale(1.02);
+        }
+        textarea, input[type="text"] {
+            width: 85%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #9e9e9e;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        input[type="submit"] {
+            padding: 15px 25px;
+            background-color: #6d4c41;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #8d6e63;
+        }
+        /* Answer Section */
+        .answer-section {
+            margin-top: 40px;
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .answer-section:hover {
+            background-color: #dcedc8;
+        }
+        h2 {
+            color: #558b2f;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #424242; 
+        }
+        .call-to-action {
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #558b2f;
+            color: white;
+            width: 50%;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+        .call-to-action:hover {
+            background-color: #6d8e31;
+        }
+    </style>
+</head>
+<body>
+    <h1>DocuChat AI</h1>
+    <form method="post">
+        <textarea name="document" placeholder="Enter document content here..." rows="10" cols="50"></textarea><br>
+        <input type="text" name="question" placeholder="Ask a question" required><br>
+        <input type="submit" value="Get Answer">
+    </form>
+
+    {% if answer %}
+        <div class="answer-section">
+            <h2>Answer:</h2>
+            <p>{{ answer }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
