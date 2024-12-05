@@ -66,3 +66,17 @@ The chatbot acts as an intelligent assistant, interacting with medical documents
    ```bash
    git clone <repository-url>
    cd <repository-folder>
+2. **Set Up a Virtual Environment**:
+   '''bash
+   python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. **Install Dependencies**:
+ '''bash
+pip install -r requirements.txt
+4. **Run the Flask App**:
+   '''bash
+   flask run
+5. **Access the Application**:
+   '''bash
+   Open your browser and navigate to http://127.0.0.1:5000.
+
